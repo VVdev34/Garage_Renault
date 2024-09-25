@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+.navbar{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(245, 240, 240, 0.11);
+    transition: all .25s linear;     
+    position: relative;
+}
+
+.navbar a {
+    color: black;
+}
+.navbar .logo{
+    font-size: 2em;
+    font-weight: 700;
+}
+.navbar .nav-links ul {
+    display: flex;
+    margin-left : 8%;
+    width: 100%;
+}
+.navbar .nav-links ul li  {
+    margin: 0 45px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+   
+}
+
+.slide-line{
+    position: relative;
+}
+.slide-line::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background: #F8B700;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition : transform 0.4s;
+}
+.slide-line:hover::before{
+    transform-origin: 0 0;
+    transform: scaleX(1);
+}
+
+.slide-link{
+    overflow: hidden;
+    position: relative;
+    font-size: 35px;
+    color: black;
+}
+.cate .slide-link{
+    font-size: 18px;
+}
+.slide-link span {
+    padding: 10px;
+    display: inline-block;
+    transition: transform 0.6s ease-out;
+}
+
+.slide-link span:nth-child(2){
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 100%;
+}
+
+.slide-link:hover span{
+    transform: translateX(-100%);
+}
+
+.navbar .menu-hg{
+    display: none;
+    width: 45px;
+    position: relative;
+    right: 60px;
+    top: 35px;
+}
+
+.logo{
+    height: 84px;
+    margin: 1%;
+}
+
+.nom{
+    font-size: 40px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+}
+
+ul span{
+    margin-left: 10px;
+    color: #F8B700;
+}
+
+.cate{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 6% 0% 0% 0%;
+    
+}
+.separation{
+    border-top:2px solid #F8B700;
+    width: 60%;
+}
+.garagePicture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.garagePicture img {
+margin-top: 1%;
+z-index: -1;
+}
+
+.entretiens{
+    margin: 5% 0% 0% 11%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.vehicules{
+    margin: 5% 0% 0% 14.5%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+h2{
+    font-size: 40px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+.voitures img{
+    margin-top : 3%; 
+    width: 350px;
+}
+
+.voitures img:hover{
+   
+    transform:rotate(5deg);
+    scale: 1.1;
+    cursor: pointer;
+}
+
+article span{
+    font-weight: 700;
+}
+p, h1 {
+    width: 100%;
+    margin-top: 3%;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.informations{
+    display: flex;
+    align-items: center;
+}
+
+.entretiens p {
+    margin: 5%;
+    font-size: 35px;
+}
+.entretiens p:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+footer{
+    margin-top: 3%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    position: relative;
+    bottom: 0;
+}
+footer li {
+    width: 100%;
+    margin: 2%;
+}
+footer span {
+    font-weight: 700;
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer p{
+    width: 100%;
+    margin: 2%;
+}
+
+footer a{
+    color: black;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+
+.img_ct{
+    width: 750px;
+    border-radius: 25px;
+    transform: rotate(2deg);
+}
+
+.ct{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.ct p {
+    margin-top: 15%;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.ct h1 {
+    text-decoration: underline;
+    text-decoration-color: #F8B700;
+}
+
+.form-admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 40vh;
+    margin-top: 10%;
+    background-color: #F8B700;
+    margin-left: 35%;
+}
+
+.form-admin_ajout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 50vh;
+    margin-top: 10%;
+    background-color: #F8B700;
+    margin-left: 35%;
+}
+
+.form-admin input, .form-admin_ajout input{
+    margin: 1%;
+    padding: 5px;
+}
+
+.form-admin button, .form-admin_ajout button {
+    padding: 5px;
+}
+.logo_admin{
+    width : 150px;
+}
+
+.nav-btn {
+    display: none;
+  }
+  #nav-check {
+    display: none;
+  }
+@media screen and (max-width: 1700px) {
+ 
+    .navbar .logo{
+        font-size: 1.6em;
+        font-weight: 700;
+    }
+    
+    .navbar .nav-links ul li  {
+        margin: 0 35px;
+        font-family: 'IBM Plex Mono', monospace;
+       
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .nav-btn{
+        display: block;
+        position: relative;
+        left :80%;
+    }
+    
+    .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid black;
+    }
+    .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+        top: 75px;
+        left: 0px;
+    }
+
+    #nav-check:checked ~ .nav-links {
+    height: calc(45vh - 50px);
+    overflow-y: auto;
+    }
+
+    .navbar .nav-links ul {
+    display: flex;
+    flex-direction: column;
+
+    }
+    .navbar a {
+        color: white;
+    }
+    .navbar .nav-links  li{
+        font-size: 30px;
+        padding : 2%; 
+    }
+    .navbar .nav-links ul span{
+        display: none;
+    }
+    .nom{
+        display: none;
+    }
+    .slide-line::before{
+        display: none;
+    }
+    .garagePicture{
+       
+        display: none;
+    }
+    .logo{
+        height: 55px;
+    }
+    
+    .vehicules, .entretiens{
+        margin: 5% 0% 0% 11%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .entretiens{
+        font-size: 60px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        font-size: 20px;
+    }
+    #contact{
+        margin: 5%;
+    }
+
+    h2{
+        font-size: 30px;
+        margin-left: 8px;
+    }
+    .separation{
+        width: 30%;
+        margin-left: 10px;
+    }
+    .cate{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .cate .slide-link{
+        font-size: 12px;
+        margin: 20px;
+    }
+
+    .slide-link{
+        font-size: 28px;
+        margin: 10px;
+    }
+  }
